@@ -1,7 +1,16 @@
 <script setup>
 import { ref } from 'vue'
-const props = defineProps(['appName'])
+const props = defineProps(['appName', 'appType'])
 const appName = ref(props.appName)
+
+const buttonSrcs = {
+  calendar: 'src/assets/images/calendar_icon.webp',
+  mail: 'src/assets/images/mail.png',
+  skills: 'src/assets/images/competences.png',
+  tech: 'src/assets/images/portable.png'
+}
+
+const buttonImageSrc = ref(buttonSrcs[props.appType])
 
 function onAppClick() {
   console.log("L'applicatiion à été cliquée")
@@ -11,12 +20,7 @@ function onAppClick() {
 <template>
   <div class="appButton">
     <div class="appButton_background" @click="onAppClick">
-      <img
-        class="appButton_icon"
-        src="/src/assets/images/calendar_icon.webp"
-        alt="App Icon"
-        srcset=""
-      />
+      <img class="appButton_icon" :src="buttonImageSrc" alt="App Icon" srcset="" />
     </div>
     <span class="appButton_name">{{ appName }}</span>
   </div>
@@ -62,5 +66,10 @@ function onAppClick() {
   flex-direction: column;
   border-radius: 1.5vh;
   user-select: none;
+}
+
+.appButton_icon {
+  width: 80%;
+  height: 80%;
 }
 </style>

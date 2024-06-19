@@ -50,7 +50,7 @@ import CompetenceContainer from '@/components/CompetenceContainer.vue'
   overflow-y: scroll;
   width: 100%;
   height: 100%;
-  background-color: rgb(106, 106, 106);
+  background-color: rgb(63, 100, 130);
   z-index: -20;
   color: white;
 }

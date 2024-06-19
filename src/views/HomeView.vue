@@ -7,11 +7,15 @@ import { RouterLink } from 'vue-router'
   <div class="appsContainer">
     <!-- CONTACT -->
     <RouterLink class="AppButtonLink" to="/contact">
-      <AppButton appName="Contact" />
+      <AppButton appType="mail" appName="Contact" />
     </RouterLink>
     <!-- CONTACT -->
     <RouterLink class="AppButtonLink" to="/competences">
-      <AppButton appName="Compétences" />
+      <AppButton appType="tech" appName="Technologies" />
+    </RouterLink>
+
+    <RouterLink class="AppButtonLink" to="/portefeuillecompetences">
+      <AppButton appType="skills" appName="Portefeuille de Compétences" />
     </RouterLink>
   </div>
 </template>
