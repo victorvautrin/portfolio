@@ -34,7 +34,7 @@ body main {
 }
 
 #phoneScreen {
-  background-image: url('public/images/phone_wallpaper.webp');
+  background-image: url('/images/phone_wallpaper.webp');
   background-size: cover;
 }
 

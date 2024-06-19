@@ -4,10 +4,10 @@ const props = defineProps(['appName', 'appType'])
 const appName = ref(props.appName)
 
 const buttonSrcs = {
-  calendar: 'public/images/calendar_icon.webp',
-  mail: 'public/images/mail.png',
-  skills: 'public/images/competences.png',
-  tech: 'public/images/portable.png'
+  calendar: '/images/calendar_icon.webp',
+  mail: '/images/mail.png',
+  skills: '/images/competences.png',
+  tech: '/images/portable.png'
 }
 
 const buttonImageSrc = ref(buttonSrcs[props.appType])
